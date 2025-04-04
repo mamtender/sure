@@ -1,0 +1,275 @@
+@import "nullStyle.css"; //файл с обнуленными стилями и шрифтом
+
+$black: #1E1E1E;
+$white: #FFFFFF;
+$gray1: #E9E9E9;
+$gray2: #cecece;
+$purple1: #4F00AF;
+$purple2: #3e0585;
+
+h1{
+    color: $purple1;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+h3{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.flex{display: flex;}
+
+input{
+    border: 1px solid $gray2;
+    border-radius: 10px;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+select{
+    background: $purple1;
+    color: $white;
+    border-radius: 8px;
+    padding: 10px;
+    width: fit-content;
+    option{
+        background: $gray1;
+    }
+}
+button{
+    background: $purple1;
+    color: $white;
+    border-radius: 8px;
+    padding: 12px 48px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+button:hover{
+    background: $purple2;
+}
+
+body{
+    flex-direction: column;
+    gap: 80px;
+    padding: 0px 0px 80px 0px;
+}
+header{
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 120px;
+    width: 100%;
+    box-shadow: 0 8px 80px 0 rgba(87, 87, 87, 0.08);
+    ul{
+        gap: 48px;
+    }
+    a{
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+section{
+    flex-direction: column;
+    gap: 80px;
+    padding: 0px 120px;
+}
+
+//раздел каталог
+.inpt{
+    gap: 36px;
+}
+.contentContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+.card{
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid $gray1;
+    border-radius: 20px;
+    cursor: pointer;
+    height: fit-content;
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 16px;
+    }
+    button{
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: 360px;
+    }
+}
+.card:hover{
+    button{
+        display: flex;
+    }
+}
+
+//раздел корзина
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.cart-item{
+    display: flex;
+    gap: 36px;
+    .cart-item-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .description{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    img{
+        height: 200px;
+        border-radius: 16px;
+    }
+    .cart-item-controls{
+        display: flex;
+        gap: 8px;
+    }
+    input{
+        border: 1px solid $purple1;
+        border-radius: 8px;
+        padding: 12px 36px;
+        width: 120px;
+        font-size: 20px;
+        color: $purple1;
+    }
+    button{
+        background: none;
+        color: $purple1;
+        border: 1px solid $purple1;
+    }
+}
+.totalCont{
+    flex-direction: column;
+    gap: 24px;
+    .row{
+        gap: 24px;
+    }
+}
+.w{
+    width: 100%;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1500px) {
+    header{
+        padding: 36px 90px;
+    }
+    section{
+        padding: 0px 90px;
+    }
+    //раздел каталог
+    .contentContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1100px) {
+    body{
+        gap: 56px;
+    }
+    header{
+        padding: 36px 60px;
+        img{
+            height: 28px;
+        }
+        ul{
+            gap: 28px;
+        }
+    }
+    section{
+        padding: 0px 60px;
+        gap: 64px;
+    }
+    //раздел каталог
+    .contentContainer{
+        gap: 20px;
+    }
+    .card img{
+        height: 260px;
+    }
+}
+@media screen  and (max-width: 800px) {
+    .cart-item{
+       gap: 20px;
+       img{
+            width: 160px;
+       }
+       .cart-item-controls{
+            flex-direction: column;
+       }
+    }
+}
+@media screen and (max-width: 720px) {
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    body{
+        gap: 48px;
+    }
+    header{
+        padding: 28px 20px;
+        a{
+            font-size: 16px;
+        }
+    }
+    section{
+        padding: 0px 20px;
+        gap: 48px;
+    }
+    button{
+        padding: 10px 28px;
+        font-size: 14px;
+    }
+    //раздел каталог
+    .contentContainer{
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .inpt{
+        gap: 16px;
+        flex-direction: column;
+    }
+    .card {
+        gap: 16px;
+        img{
+            height: 200px;
+        }
+        .card-body{
+            gap: 16px;
+            padding: 0 16px;
+        }
+    }
+
+    .cart-item input{
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+}

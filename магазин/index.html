@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body class="flex" id="catalogPage">
+    <header class="flex">
+        <a href=""><img src="./assets/img/logo.svg" alt="sure"></a>
+        <ul class="flex">
+            <li><a href="./index.html">Каталог</a></li>
+            <li><a href="./index2.html">Корзина</a></li>
+        </ul>
+    </header>
+
+    <section class="flex" id="catalog">
+        <div class="inpt flex">
+            <input type="search" name="" id="search" placeholder="Поиск">
+            <select id="serviceType">
+                <option value="" disabled selected>Фильтры</option>
+                <option value="">Все</option>
+                <option value="Футболки и топы">Футболки и топы</option>
+                <option value="Джинсы">Джинсы</option>
+            </select>
+        </div>
+        <div class="contentContainer flex" id="cardsContainer"></div>
+    </section>
+</body>
+</html>

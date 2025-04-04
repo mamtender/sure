@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style-type: none;
+  outline: none;
+  box-sizing: border-box;
+  color: #1E1E1E;
+  font-family: "montserrat";
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../assets/fonts/Montserrat-Medium.ttf);
+}

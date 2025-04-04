@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body class="flex" id="cartPage">
+    <header class="flex">
+        <a href=""><img src="./assets/img/logo.svg" alt="sure"></a>
+        <ul class="flex">
+            <li><a href="./index.html">Каталог</a></li>
+            <li><a href="./index2.html">Корзина</a></li>
+        </ul>
+    </header>
+
+    <section class="flex" id="cart">
+        <h1>КОРЗИНА</h1>
+        <div class="cardContainer flex" id="shooseCardContainer"></div>
+        <div class="totalCont flex">
+            <div class="row flex">
+                <h2>Количество товаров:</h2>
+                <h3 id="countOfProducts">0</h3>
+            </div>
+            <div class="row flex">
+                <h2>Итоговая стоимость:</h2>
+                <h3 id="totalPrise">0 руб</h3>
+            </div>
+        </div>
+        <div class="w flex">
+            <button id="buy">Перейти к оформлению</button>
+        </div>
+    </section>
+</body>
+</html>
